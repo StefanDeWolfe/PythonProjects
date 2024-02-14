@@ -6,6 +6,9 @@ But they are listed here if you are interested.
 I'll put more formal portfolio projects in a folder labled as such, and personal projects in a folder with that name. 
 
 # Portfolio Projects
+Included is:
+* A set of take home problems and live coding sessions I created as a part of my Delphix interviews. 
+* A .feature file with test cases for a mock "admin role invites new user" feature.
 
 # Personal Projects
 Included is a Utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG. 
