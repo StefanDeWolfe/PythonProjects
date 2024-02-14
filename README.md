@@ -3,7 +3,7 @@ There are a couple of projects here as an example of what I can do.
 They are probably not adhering to any code standard, as I wrote most of them at different times and generally for myself, rather than for public viewing. 
 But they are listed here if you are interested. 
 
-I'll put more formally portfolio projects in a folder labled as such, and personal projects in a folder with that name. 
+I'll put more formal portfolio projects in a folder labled as such, and personal projects in a folder with that name. 
 
 # Portfolio Projects
 

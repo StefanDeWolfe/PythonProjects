@@ -1,0 +1,186 @@
+'''Your previous Plain Text content is preserved below:
+===== Preface =====
+'''
+'''
+===== Intro =====
+
+San Francisco's International Airport (KSFO) continuously tries
+to improve the quality of its flight estimates by 
+analyzing data from past flights and 
+figuring out the root-cause of outliers and inaccurate estimates. 
+In order to do this the teams that are tasked to solve this problem 
+need to figure out ways of finding those outliers in their data.
+
+For the purpose of this interview question, 
+imagine that you are one of the engineers working on this problem. 
+One of your colleagues suggested during a meeting that a good first step on finding those outliers would be 
+categorize past flight information by departure airport (e.g. the airport that a plane departs from to arrive at KSFO)
+
+and focus on the ones whose flight duration varies the most. 
+Your team decided that this idea is worth pursuing and you're tasked with implementing it.
+
+Your goal is to write a small program that utilizes the OpenSky public API and 
+prints the 5 most varied flight duration data from flights that arrived in KSFO the past 3 days, 
+categorized by departure airport.
+'''
+'''
+Here is an example of the output of such a utility:
+
+    ---------------------------------------------------
+    Interval [2021-03-08 18:03:24, 2021-03-11 18:03:24]
+    ---------------------------------------------------
+    Airport Code | (max - min flight duration)
+    ---------------------------------------------------
+    LFPG         | 23:27:18
+    KORD         | 5:20:06
+    KDEN         | 4:16:37
+    VIDP         | 1:03:25
+    KEWR         | 0:44:26
+'''
+
+''' Interpreting the above data we can see that in the past 3 days
+we saw a big outlier in which the slowest flight from LFPG
+(Charles de Gaulle in Paris) was more than 23 hours slower than
+the quickest flight from that same airport.
+
+Rules/constraints:
+* Print the 5 departure airports in sorted order (the airport
+  with the maximum flight difference should appear at the top
+  and the rest shall follow in descending order).
+* Limit the output to 5 departure airports
+* Print actual difference in time between the longest and the
+  shortest flight duration.
+
+Your output does not need to match the above example, The example
+mostly exists to explain the problem and act as a guide to what
+what we are looking for. If you have better ideas of how to display
+the data, please do!
+
+You should implement this in whatever language you're most
+comfortable with -- just make sure your code is production
+quality, well designed, and easy to read.
+
+Finally, please help us by keeping this question and your
+answer secret so that every candidate has a fair chance in
+future Delphix interviews.
+'''
+''' ===== Steps =====
+
+    1.  Choose the language you want to code in from the menu
+        labeled "Plain Text" in the top right corner of the
+        screen. You will see a "Run" button appear on the top
+        left -- clicking this will send your code to a Linux
+        server and compile / run it. Output will appear on the
+        right side of the screen.
+        
+        For information about what libraries are available for
+        your chosen language, see:
+
+          https://coderpad.io/languages
+
+    2.  Pull up the documentation for the API you'll be using:
+
+         https://openskynetwork.github.io/opensky-api/rest.html
+
+    3. The API has most of its examples using authentication
+        credentials like so:
+
+          https://USERNAME:PASSWORD@opensky-network.org/api/flights/arrival?airport=KSFO..etc..
+
+        You don’t need actual credentials to use the API. For
+        the same example request show above just remove the
+        “USERNAME:PASSWORD@” part like so:
+
+          https://opensky-network.org/api/flights/arrival?airport=KSFO..etc...
+
+    4.  Implement the functionality described above, using data
+        fetched dynamically from the Arrivals-By-Airport API
+        described here:
+
+          https://openskynetwork.github.io/opensky-api/rest.html#arrivals-by-airport
+
+    5.  Output any results through the main() method of
+        your program so that we can easily run them.
+'''
+''' ====== FAQs =====
+
+    Q:  How do I know if my solution is correct?
+    A:  Make sure you've read the prompt carefully and you're
+        convinced your program does what you think it should
+        in the common case. If your program does what the prompt 
+        dictates, you will get full credit. We do not use an
+        auto-grader, so we do not have any values for you to
+        check correctness against.
+        
+    Q:  What is Delphix looking for in a solution?
+    A:  After submitting your code, we'll have a pair of engineers
+        evaluate it and determine next steps in the interview process.
+        We are looking for correct, easy-to-read, robust code.
+        Specifically, ensure your code is idiomatic and laid out
+        logically. Ensure it is correct. Ensure it handles all edge
+        cases and error cases elegantly.
+        
+    Q:  If I need a clarification, who should I ask?
+    A:  Send all questions to the email address that sent you
+        this document, and an engineer at Delphix will get
+        back to you ASAP (we're pretty quick during normal
+        business hours).
+
+    Q:  How long should this question take me?
+    A:  Approximately 1 hour, but it could take more or less
+        depending on your experience with web APIs and the
+        language you choose.
+
+    Q:  When is this due?
+    A:  We will begin grading your answer 24 hours after it is
+        sent to you, so that is the deadline.
+        
+    Q:  What if something comes up and I cannot complete the
+        problem during the 24 hours?
+    A:  Reach out to us and let us know! We will work with you
+        to figure out an extension if necessary.
+
+    Q:  How do I turn in my solution?
+    A:  Anything you've typed into this document will be saved.
+        If you were given a Takehome question, there should be a Submit
+        Button in the bottom right of the coderpad page. If you do not
+        see such a button, feel free to email us when you are done with
+        your solution. We will respond confirming we've received the
+        solution within 24 hours.
+
+    Q:  Can I use any external resources to help me?
+    A:  Absolutely! Feel free to use any online resources you
+        like, but please don't collaborate with anyone else.
+
+    Q:  Can I use my favorite library in my program?
+    A:  Unfortunately, there is no way to load external
+        libraries into CoderPad, so you must stick to what
+        they provide out of the box for your language:
+
+            https://coderpad.io/languages
+
+        If you really want to use something that's not
+        available, email the address that sent you this link
+        and we will work with you to find a solution.
+
+    Q:  Can I code this up in a different IDE?
+    A:  Of course! However, we do not have your environment
+        to run your code in. We ask that you submit your final
+        code via CoderPad (and make sure it can run). This gives
+        our graders the ability to run your code rather than guessing.
+
+    Q:  Why does my program terminate unexpectedly in
+        CoderPad, and why can't I read from stdin or pass
+        arguments on the command line?
+    A:  CoderPad places a limit on the runtime and amount of
+        output your code can use, but you should be able to
+        make your code fit within those limits. You can hard
+        code any arguments or inputs to the program in your
+        main() method or in your tests.
+
+    Q:  I'm a Vim/Emacs fan -- is there any way to use those
+        keybindings? What about changing the tab width? Font
+        size?
+    A:  Yes! Hit the button at the bottom of the screen that
+        looks like a keyboard.
+'''
