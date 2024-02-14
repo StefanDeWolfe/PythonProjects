@@ -10,6 +10,7 @@ Included is:
 * A set of take home problems and live coding sessions I created as a part of my Delphix interviews. 
 * A .feature file with test cases for a mock "admin role invites new user" feature.
 * An example of the classic FizzBuzz problem. Done from memory and within 30 minutes.
+* An example of OOP with a Blackjack game. Run with the command "python Blackjack.py" and enjoy.
 
 # Personal Projects
 Included:
