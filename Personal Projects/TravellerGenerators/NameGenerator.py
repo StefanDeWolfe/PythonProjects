@@ -1,4 +1,7 @@
-#from Interface import Interface as interface
+# Author: Stefan DeWolfe
+# Date: 9 / 2022
+# Last Modified: 2 / 14 / 2024
+# 
 import os, getopt, sys
 import random
 from TravellerLibrary import NameGenerator

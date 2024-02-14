@@ -1,3 +1,7 @@
+# Author: Stefan DeWolfe
+# Date: 9 / 2022
+# Last Modified: 2 / 14 / 2024
+# 
 import random, sys, os, getopt, pickle
 from os.path import exists
 from TravellerLibrary import *

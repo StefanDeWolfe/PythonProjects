@@ -12,6 +12,6 @@ Included is:
 * An example of the classic FizzBuzz problem. Done from memory and within 30 minutes.
 
 # Personal Projects
-Included is a Utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG. 
-* There are sector generators, system editors, character creator/editors, NPC generators, a bunch of tables from various books old and new, some generators I found online.
+Included:
+* A utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG.There are sector generators, system editors, character creator/editors, NPC generators, a bunch of tables from various books old and new, some generators I found online.
 
