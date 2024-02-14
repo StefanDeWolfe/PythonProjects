@@ -9,6 +9,7 @@ I'll put more formal portfolio projects in a folder labled as such, and personal
 Included is:
 * A set of take home problems and live coding sessions I created as a part of my Delphix interviews. 
 * A .feature file with test cases for a mock "admin role invites new user" feature.
+* An example of the classic FizzBuzz problem. Done from memory and within 30 minutes.
 
 # Personal Projects
 Included is a Utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG. 
