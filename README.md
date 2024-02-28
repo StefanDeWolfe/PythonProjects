@@ -14,5 +14,7 @@ Included is:
 
 # Personal Projects
 Included:
-* A utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG.There are sector generators, system editors, character creator/editors, NPC generators, a bunch of tables from various books old and new, some generators I found online.
+* A utility set for the Mongoose 2nd ed Traveller and/or Cepheus Engine RPG.
+  There are sector generators, system editors, character creator/editors, NPC generators,
+  a bunch of tables from various books old and new, some generators I found online.
 
