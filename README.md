@@ -11,6 +11,7 @@ Included is:
 * A .feature file with test cases for a mock "admin role invites new user" feature.
 * An example of the classic FizzBuzz problem. Done from memory and within 30 minutes.
 * An example of OOP with a Blackjack game. Run with the command "python Blackjack.py" and enjoy.
+* An example of a decoder that takes in a text file filled with non-repeating numbers, a space, and a word on each line. It organizes it into a pyramid of descending numbers, reading in the right most number's word in order to decode the final message. Run with the command "python decode.py [textfile.txt]".
 
 # Personal Projects
 Included:
