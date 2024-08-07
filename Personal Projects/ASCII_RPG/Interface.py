@@ -9,6 +9,7 @@ import keyboard
 import typing
 from typing import List
 from typing import Dict
+
 class Interface:
     symbol_underscore: str = "_"
     barrier: str = "|"
@@ -20,18 +21,43 @@ class Interface:
     symbol_beta: str  = "β"   # BETA
     symbol_gamma: str = "γ"  # GAMMA
     symbol_omega: str = "Ω"  # OMEGA
-    colors: dict = {"red": "\033[91m",
-                    "purple": "\33[95m",
-                    "blue": "\33[34m",
-                    "blue2": "\33[36m",
-                    "blue3": "\33[96m",
-                    "green": "\033[92m",
-                    "green2": "\033[32m",
-                    "brown": "\33[33m",
-                    "yellow": "\33[93m",
-                    "grey": "\33[37m",
-                    "default": "\033[0m"
-                    }
+    colors: dict = {
+        # Colors
+        "red2": "\33[31m",
+        "green2": "\33[32m",
+        "brown": "\33[33m",
+        "blue2": "\33[34m",
+        "purple2": "\33[35m",
+        "blue3": "\33[36m",
+        #
+        "red highlight": "\033[41m",
+        "green highlight": "\033[42m",
+        "yellow highlight": "\033[43m",
+        "blue highlight": "\033[44m",
+        "purple highlight": "\033[45m",
+        "cyan highlight": "\033[46m",
+        # Normal Colors
+        'grey': '\033[90m',
+        'gray': '\033[90m',
+        "red": "\033[91m",  # red2
+        "green": "\033[92m",  # green2
+        "yellow": "\33[93m",  # brown
+        "blue": "\33[94m",  # blue2-3
+        'purple': '\033[95m', # purple2
+        'magenta': '\033[95m',
+        'cyan': '\033[96m',
+        'white': '\033[97m',
+        'default': '\033[0m',
+        # Special
+        "white1": "\033[1m",
+        "grey1": "\033[2m",
+        "italics": "\033[3m",
+        "underlined": "\033[4m",
+        "flashing": "\033[5m",
+        "highlighted": "\033[7m",
+        "slashthrough": "\033[9m",
+        "double underlined": "\033[9m",
+        }
     def __init__(self):
         self.settings = {
 
@@ -73,14 +99,7 @@ class Interface:
             print("|" + "".join(row_tiles) + "|")
         print(frame)
 
-    def get_item_from_menu(
-        self, 
-        prompt: str, 
-        menu_options: [str], 
-        cannot_pick: List[str] = [],
-        marked_options: Dict = {},
-        zero_option=False
-        ) -> str:
+    def get_item_from_menu(self, prompt: str, menu_options: [str], cannot_pick: List[str] = [], marked_options: Dict = {}, zero_option=False ) -> str:
         is_selecting = True
         while is_selecting:
             chosen_option = None
